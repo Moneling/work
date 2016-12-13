@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>addClassTest</title>
+</head>
+<style type="text/css">
+	.hh{
+		width: 200px;
+		height: 33px;
+		background-color: red;
+	}
+</style>
+<body>
+		<div id="test">
+			
+		</div>
+		<button id="add">添加</button>
+
+		<script type="text/javascript">
+			var test = document.getElementById("test");
+			var add = document.getElementById("add");
+
+			add.addEventListener("click",function(){
+						console.log(2);
+				test.setAttribute("class", "hh");
+			})
+
+		</script>
+</body>
+</html>

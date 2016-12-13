@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>菜单管理</title>
+	<link rel="stylesheet" type="text/css" href="css/menu/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/menu/menu.css">
+</head>
+<body>
+	<div id="menu">
+		<div class="menu-nav">
+			<h2>菜单管理</h2>
+		</div>
+		<div class="menu-content">
+			<div class="menu-content-tip">
+				这是一个提示信息栏，默认不显示，根据需要调用显示......
+			</div>
+			<!-- 内容盒子 -->
+			<div class="menu-content-main">
+			<!-- 左面显示模型内容 -->
+				<div class="menu-content-main-show">
+					<div class="main-show-top">
+							<h2>标题内容</h2>
+					</div>
+					<div class="main-show-bot">
+							<div class="keybord"></div>
+							<div class="menu-detail">
+									<div class="menu-add" id="menu-add">
+										<a href="#" id="add-menu-items" >＋ 添加菜单</a>
+									</div>
+									 <div class="menu-items" id="menu-items">
+									 				<!-- 这里循环添加菜单数据 -->
+													<div class="menu-item-add menuStyle" id="menu-item-add">
+														<a href="" id="add-new-items">＋</a>
+														
+													</div>
+											</div>  
+							</div>
+							
+					</div>
+				</div>
+			<!-- 右面操作内容 -->
+				<div class="menu-content-main-action" id="menuDtailContent">
+						<div class="first-menu add-menu-detail">
+								<div class="add-menu-detail-title">
+									<h2>菜单名称</h2>
+									<a href="#" class="delete-menu">删除菜单</a>
+								</div>
+								<div class="add-menu-detail-body">
+										<div class="menu-name">
+											<span>菜单名称</span>
+											<input type="text" name="" class="inp-menu-name" id="menu-name">
+											<p class="inp-err-msg">这里是文本框输入规范提示</p>
+										</div>
+										<div class="menu-type">
+											<span>菜单内容</span>
+											<label>
+												 <input type="radio" name="menu-send" value="send-msg" onchange ="sendtype()" checked="true" >
+													<span>发送消息</span>
+											</label>
+											<label>
+												 <input type="radio" name="menu-send" value="send-url" onchange ="sendtype()" >
+													<span>跳转网页</span>
+											</label>
+											
+											
+										</div>
+										<div class="menu-type-detail" id="content-type-text">
+												<div class="menu-type-detail-select">
+													<a href="#"><span>图文消息</span></a>
+												</div>
+												<div class="menu-type-detail-material">
+													<div class="already-material material">
+															<a href="#" id="addInnerMaterial"><p>+</p><span>从素材库中选择</span>
+													</a>
+													</div>
+													 <div class="new-material material">
+													 				<p>+</p>
+													 				<a href="">上传图片</a>
+													 			</div> 
+												</div>
+										</div>
+										<div class="menu-type-detail-url" id="content-type-url">
+												<p id="url-msg">相关提示信息....</p>
+												<label>
+													<span>页面地址</span>
+													<input type="" name="" class="inp-menu-name" id="menu-url-name">
+													<p><a href="#">添加内部库链接</a></p>
+												</label>
+										</div>
+								</div>
+								<div class="add-menu-detail-submit">
+									<input type="button" name="" value="保存并发布" class="save-submit" id="save-submit">
+								</div>
+						</div>
+						<!-- <div class="secend-menu">
+							
+						</div> -->
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+
+	
+
+	<div id="dim_tip_msg">
+		<div class="wrap" id="wrap">
+		<!-- <div id="close_dim"><a href="">×</a></div> -->
+		<div class="content">
+			<div class="inner-content">
+				<div class="title_search">
+					<h3>图文消息</h3>
+				</div>
+			</div>
+			<div class="content_img" id="content_img">
+			
+					<div class="each_img">
+
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first">
+									<h3>即可合法打工</h3>
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是快过节了挥洒的；干净利索刚看电视监控</dd>
+								</dl>
+							</div>
+						</div>
+						<!-- 	新添加一个突出蒙版选择div -->
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div>
+					
+					<div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div><div class="each_img every_img">
+						<div class="img_top">
+							<h4>时间</h4>
+							<div class="img_center">							
+								<dl class="img_first every_dl">
+									<dt><img src="img/0.jpg" alt=""></dt>
+									<dd>但是利索刚看电视监控更</dd>
+								</dl>
+								<dl class="img_second">
+									<dt><img src="img/7.jpg"/></dt>
+									<dd>你空间高等</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="msg_msk">
+							<i class="icon_selected"></i>
+						</div>
+					</div></div>
+		</div>	
+		<div id="dim_tip_action">
+				<button class="btn add">添加</button>&nbsp;&nbsp;&nbsp;
+				<button class="btn delete">退出</button>&nbsp;&nbsp;&nbsp;
+		</div>								
+	</div>	 
+	</div>
+<script src="js/menu/jquery.js"></script>
+	<script src="js/menu/menu.js"></script>
+	
+	
+</body>
+</html>

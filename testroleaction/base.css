@@ -1,0 +1,115 @@
+html,body,ul,li,h1,h2,h3,h4,h5,h5,h6,img,a,p,dl,dt,dd{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	font-family: "微软雅黑";
+}
+body{
+	background-color: #eee;
+	text-align: center;
+
+}
+
+#main{
+	width: 800px;
+	height: 600px;
+	background-color: #fff;
+	margin: auto;
+	border: 1px solid #f4f4f4;
+}
+.top{
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid gray;
+	box-sizing: border-box;
+	line-height: 50px;
+	background: #3E3E3C;
+	color: white;
+}
+.mid{
+	width: 100%;
+	height: 500px;
+	margin: auto;
+	//line-height: 500px;
+}
+
+.mid-left{
+	width: 150px;
+	height: 100%;
+	border-right:1px solid #efefef; 
+	box-sizing: border-box;
+	float: left;
+	background: #E6E6E6;
+
+}
+.mid-right{
+	overflow: hidden;
+	height: 100%;
+	padding-top: 50px;
+	//background-color: #AEC77A;
+	box-sizing: border-box;
+}
+
+.bottom{
+	width: 100%;
+	height: 50px;
+	margin: auto;
+	border-top: 2px solid gray;
+	line-height: 50px;
+	background: #272822;
+	color: #F2F2B3;
+}
+
+.test{
+	background-color: red;
+	display: block;
+	
+}
+
+.test1{
+	display: block;
+	color:pink;
+	font-weight: 600;
+	
+}
+
+.test2{
+	font-size: 30px;
+
+}
+
+
+/* 按钮样式 */
+
+.btn{
+	width: 60px;
+	height: 30px;
+	border: none;
+	list-style: none;
+	border-radius: 3px;
+	color: white;
+}
+.create{
+	background:#5BC0DE;
+}
+.updatePart{
+	background:#F89810;
+}
+.delete{
+	background:#D9534F;
+}
+.detail{
+	background:#F0AD4E;
+}
+.search{
+	background:#5CB85C;
+}
+.query{
+	background:#0077CC;
+}
+.reset{
+	background:#4BB1CF;
+}
